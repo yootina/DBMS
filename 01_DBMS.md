@@ -77,3 +77,18 @@ WHERE 조건~~;
 
 #### ALIAS(별칭)
 > SELECT 컬럼명 AS 별칭 FROM 테이블명;
+
+
+#### LIMIT/OFFSET
+- LIMIT과 OFFSET은 주로 결과 집합의 특정 부분을 제한하거나 건너뛸 때 사용
+- LIMIT은 반환되는 레코드의 수를 제한하는데에 사용.
+- 예를 들어, 결과의 처음 5개 레코드만을 선택하려면 `LIMIT 5`을 사용.
+- OFFSET은 처음 몇 개의 레코드를 건너뛸 것인지를 지정하는데에 사용.
+- 예를 들어, 처음 5개 레코드를 건너뛰고 그 다음 10개 레코드를 선택하려면 LIMIT 10 OFFSET 5를 사용.
+> SELECT * FROM exercise1 LIMIT 10; </br>
+> SELECT * FROM exercise1 LIMIT 5, 3; (5번째 행부터 3개의 행을 출력) </br>
+> SELECT * FROM exercise1 LIMIT 3, OFFSET 5; (5개의 데이터 다음 3개의 데이터 출력)
+
+
+#### DISTINCT (중복된 데이터 제외)
+> SELECT DISTINCT 수학 FROM exercise1; (수학 컬럼에서 중복된 항 하나만 남기고 선택)
